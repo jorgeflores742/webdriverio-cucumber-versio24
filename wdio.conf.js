@@ -1,4 +1,5 @@
-    exports.config = {
+
+exports.config = {
     
     //
     // ==================
@@ -10,7 +11,7 @@
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './features/**/*.feature'
+        './e2e/features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -128,9 +129,7 @@
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: [
-            './features/step-definitions/test-steps.js'
-        ],        // <string[]> (file/dir) require files before executing features
+        require: ['./e2e/features/step_definitions/**/*.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
@@ -143,7 +142,7 @@
         strict: false,      // <boolean> fail if there are any undefined or pending steps
         tags: [],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 20000,     // <number> timeout for step definitions
-        ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
+        ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treºat undefined definitions as warnings.
     },
     
     //
