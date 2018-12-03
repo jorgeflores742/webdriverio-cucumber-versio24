@@ -1,5 +1,4 @@
-/** Example PageObject **/
-
+'use strict';
 const Page = require('./page');
 
 const examplePages = Object.create(Page, {
@@ -18,8 +17,6 @@ const examplePages = Object.create(Page, {
     userInput:          { value: 'user' },
     passwordInput:      { value: 'password' },
     loginButton:        { value: '#login' },
-    resultsList:        { value: '#rso' },
-
 });
 
 module.exports = examplePages;

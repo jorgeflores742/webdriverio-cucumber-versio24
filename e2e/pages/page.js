@@ -1,4 +1,4 @@
-/** Stateless prototype object required for all pages **/
+'use strict';
 
 function Page () { //eslint-disable-line require-jsdoc
 }

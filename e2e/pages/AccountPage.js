@@ -1,3 +1,4 @@
+'use strict';
 class AccountPage {
 
 
@@ -11,9 +12,9 @@ class AccountPage {
     }
 
     selectCreateNewBoard() {
-        browser.pause(2000);
+        browser.pause(1000);
         browser.click('a.quiet-button.js-add-board');
-        browser.pause(2000);
+        browser.pause(1000);
     }
 }
 module.exports = AccountPage;

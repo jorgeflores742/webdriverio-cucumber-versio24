@@ -9,7 +9,6 @@ let accountP = new AccountPages();
 let createNBoardP = new CreateBoardPages();
 
 Given(/^I navigate to trello$/, () => {
-    // browser.waitForExist(algo,30000);
     browser.url(ePage.trelloUrl)
 });
 
@@ -19,10 +18,10 @@ When(/^I with account valid clicked in button login$/, () => {
     loginP.clickLogin();
 });
 
-When(/^I create a new board$/, () => {
+When(/^I create a new board$/, function(data){
     accountP.clickBoardButton();
     accountP.selectCreateNewBoard();
-    createNBoardP.setNameToNewBoardTextField();
+    createNBoardP.setDataToNewBoardTextField(data);
     createNBoardP.clickCreateBoardButton();
 });
 
